@@ -1,0 +1,58 @@
+-- User TEST
+DROP SCHEMA IF EXISTS test CASCADE;
+
+DROP ROLE IF EXISTS test;
+
+CREATE ROLE test LOGIN PASSWORD 'test' VALID UNTIL 'infinity';
+
+CREATE SCHEMA test AUTHORIZATION test;
+
+commit;
+
+
+-- User SUGARCRM
+DROP SCHEMA IF EXISTS sugarcrm CASCADE;
+
+DROP ROLE IF EXISTS sugarcrm;
+
+CREATE ROLE sugarcrm LOGIN PASSWORD 'sugarcrm' VALID UNTIL 'infinity';
+
+CREATE SCHEMA sugarcrm AUTHORIZATION sugarcrm;
+
+commit;
+
+
+-- User DWHSTAGE
+DROP SCHEMA IF EXISTS dwhstage CASCADE;
+
+DROP ROLE IF EXISTS dwhstage;
+
+CREATE ROLE dwhstage LOGIN PASSWORD 'dwhstage' VALID UNTIL 'infinity';
+
+CREATE SCHEMA dwhstage AUTHORIZATION dwhstage;
+
+commit;
+
+
+-- User DWHREPORT
+DROP SCHEMA IF EXISTS dwhreport CASCADE;
+
+DROP ROLE IF EXISTS dwhreport;
+
+CREATE ROLE dwhreport LOGIN PASSWORD 'dwhreport' VALID UNTIL 'infinity';
+
+CREATE SCHEMA dwhreport AUTHORIZATION dwhreport;
+
+commit;
+
+
+-- User DBADMIN
+DROP SCHEMA IF EXISTS dbadmin CASCADE;
+
+DROP ROLE IF EXISTS dbadmin;
+
+CREATE ROLE dbadmin LOGIN PASSWORD 'dbadmin' VALID UNTIL 'infinity';
+
+CREATE SCHEMA dbadmin AUTHORIZATION dbadmin;
+
+commit;

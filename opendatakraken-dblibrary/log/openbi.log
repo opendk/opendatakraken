@@ -1,0 +1,5 @@
+2015-08-14 14:55:53.043 [Test worker] INFO  org.openbusinessintelligence.dblibrary.DBLibraryManager - Class name = org.openbusinessintelligence.testframework.TestFrameworkImpl
+2015-08-14 14:57:05.975 [Test worker] INFO  org.openbusinessintelligence.dblibrary.DBLibraryManager - Class name = org.openbusinessintelligence.testframework.TestFrameworkImpl
+2015-08-14 15:00:25.269 [Test worker] INFO  org.openbusinessintelligence.dblibrary.DBLibraryManager - Class name = org.openbusinessintelligence.testframework.TestFrameworkImpl
+2015-08-14 15:00:40.047 [Test worker] INFO  org.openbusinessintelligence.dblibrary.DBLibraryManager - Class name = org.openbusinessintelligence.testframework.TestFrameworkImpl
+2015-08-24 18:15:28.253 [Test worker] INFO  org.opendatakraken.dblibrary.DBLibraryManager - Class name = org.openbusinessintelligence.testframework.TestFrameworkImpl

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: Open Data Kraken CLI
+Implementation-Version: 0.2
+Main-Class: org.opendatakraken.cli.Main
+

@@ -1,0 +1,50 @@
+apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.6'
+}
+
+sourceCompatibility = '1.8'
+version = '0.1'
+mainClassName = 'org.opendatakraken.cli.Main'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile project(':opendatakraken-core')
+	compile project(':opendatakraken-dblibrary')
+	compile project(':opendatakraken-etl')
+	compile project(':opendatakraken-repo')
+	compile project(':opendatakraken-cli')
+}
+
+/*subprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		testCompile 'junit:junit:*'
+	}
+
+	version = '1.0'
+
+	jar {
+		manifest.attributes provider: 'Open Data Kraken'
+	}
+}*/
