@@ -1,4 +1,4 @@
-# OpenBI
+# Open Data Kraken
 
 The Open Data Kraken is a suite of tools to facilitate every day tasks in business intelligence and data warehousing projects.
 
