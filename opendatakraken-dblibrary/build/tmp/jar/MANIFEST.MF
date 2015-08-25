@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Open BI Library
-Implementation-Version: 0.1
-

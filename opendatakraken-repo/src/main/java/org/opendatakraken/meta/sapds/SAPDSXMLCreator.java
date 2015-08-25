@@ -88,7 +88,7 @@ public class SAPDSXMLCreator {
 		
 		query = em.createQuery("SELECT x FROM StageSource x WHERE x.etlStageSourceCode = ?1"); 
 		query.setParameter(1, stageSourceCode);
-		List<StageSource> sources = (List<StageSource>) query.getResultList();
+		List<StageSource> sources = query.getResultList();
 		
 		// get source objects and dbs
 		List<StageObject> objects = sources.get(0).getStageObject();
@@ -128,7 +128,7 @@ public class SAPDSXMLCreator {
 				LOGGER.info("Source: " + stageSourceCode + " - Object: " + object.getEtlStageObjectName() + " - BEGIN");
 				query = em.createQuery("SELECT x FROM StageColumn x WHERE x.etlStageObjectId = ?1 ORDER BY x.etlStageColumnPos");
 				query.setParameter(1, object.getEtlStageObjectId()); 
-				List<StageColumn> columns = (List<StageColumn>) query.getResultList();
+				List<StageColumn> columns = query.getResultList();
 				srcColumns = new String[columns.size()];
 				trgColumns = new String[columns.size()];
 				trgTypes = new String[columns.size()];

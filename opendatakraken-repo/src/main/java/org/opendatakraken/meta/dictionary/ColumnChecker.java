@@ -45,11 +45,11 @@ public class ColumnChecker {
 		
 		query = em.createQuery("SELECT x FROM StageSource x WHERE x.etlStageSourceCode = ?1"); 
 		query.setParameter(1, stageSourceCode);		
-		List<StageSource> sources = (List<StageSource>)query.getResultList();
+		List<StageSource> sources = query.getResultList();
 		
 		// get source objects and dbs
-		List<StageObject> objects = (List<StageObject>) sources.get(0).getStageObject();
-		List<StageSourceDb> sourcedbs = (List<StageSourceDb>) sources.get(0).getStageSourceDb();
+		List<StageObject> objects = sources.get(0).getStageObject();
+		List<StageSourceDb> sourcedbs = sources.get(0).getStageSourceDb();
 
 		// load properties from property file
 		String dbpropertyfile = "datasources/" + sourcedbs.get(0).getEtlStageSourceDbJdbcname() + ".properties";
