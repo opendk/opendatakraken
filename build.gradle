@@ -11,11 +11,11 @@ allprojects {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.7'
+	gradleVersion = '2.8'
 }
 
 sourceCompatibility = '1.8'
-version = '0.1'
+version = '0.2'
 mainClassName = 'org.opendatakraken.cli.Main'
 
 repositories {
