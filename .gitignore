@@ -180,8 +180,12 @@ hs_err_pid*
 
 # Project specific
 
+/opendatakraken-cli/build/
 /opendatakraken-core/build/
 /opendatakraken-dblibrary/build/
+/opendatakraken-dblibrary-oracle/build/
+/opendatakraken-dblibrary-sqlsrv/build/
 /opendatakraken-etl/build/
+/opendatakraken-lib/build/
 /opendatakraken-repo/build/
-/opendatakraken-cli/build/
+/opendatakraken-web/build/
