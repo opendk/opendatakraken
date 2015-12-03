@@ -1,0 +1,56 @@
+2015-12-03 14:06:13.910 [main] INFO  org.opendatakraken.cli.Main - ###################################################################
+2015-12-03 14:06:13.916 [main] INFO  org.opendatakraken.cli.Main - START
+2015-12-03 14:06:13.916 [main] INFO  org.opendatakraken.cli.Main - Configure command line options
+2015-12-03 14:06:13.996 [main] INFO  org.opendatakraken.cli.Main - Options configured
+2015-12-03 14:06:14.001 [main] INFO  org.opendatakraken.cli.Main - Feature: tablecopy
+2015-12-03 14:06:14.001 [main] INFO  org.opendatakraken.cli.Main - Copy an entire schema, a single table or the result of a query from a database to another
+2015-12-03 14:06:14.006 [main] DEBUG org.opendatakraken.cli.Main - srcdbconnkeywordfile: No such option
+2015-12-03 14:06:14.007 [main] DEBUG org.opendatakraken.cli.Main - srcdbdriverclass: No such option
+2015-12-03 14:06:14.007 [main] DEBUG org.opendatakraken.cli.Main - srcdbconnectionurl: No such option
+2015-12-03 14:06:14.007 [main] DEBUG org.opendatakraken.cli.Main - srcdbusername: No such option
+2015-12-03 14:06:14.008 [main] DEBUG org.opendatakraken.cli.Main - srcdbpassword: No such option
+2015-12-03 14:06:14.009 [main] DEBUG org.opendatakraken.cli.Main - trgdbconnkeywordfile: No such option
+2015-12-03 14:06:14.011 [main] DEBUG org.opendatakraken.cli.Main - trgdbdriverclass: No such option
+2015-12-03 14:06:14.012 [main] DEBUG org.opendatakraken.cli.Main - trgdbconnectionurl: No such option
+2015-12-03 14:06:14.012 [main] DEBUG org.opendatakraken.cli.Main - trgdbusername: No such option
+2015-12-03 14:06:14.012 [main] DEBUG org.opendatakraken.cli.Main - trgdbpassword: No such option
+2015-12-03 14:06:14.012 [main] INFO  org.opendatakraken.cli.Main - Source and target connections prepared
+2015-12-03 14:06:14.012 [main] INFO  org.opendatakraken.cli.Main - Source schema: dbo
+2015-12-03 14:06:14.012 [main] INFO  org.opendatakraken.cli.Main - Source table: tab_test
+2015-12-03 14:06:14.012 [main] DEBUG org.opendatakraken.cli.Main - sourcequery: No such option
+2015-12-03 14:06:14.014 [main] INFO  org.opendatakraken.cli.Main - Source query: null
+2015-12-03 14:06:14.014 [main] INFO  org.opendatakraken.cli.Main - Target schema: dbo
+2015-12-03 14:06:14.014 [main] INFO  org.opendatakraken.cli.Main - Target table: stg_sqlserver_tab_test
+2015-12-03 14:06:14.014 [main] INFO  org.opendatakraken.core.db.DBConnection - Opening connection...
+2015-12-03 14:06:14.015 [main] INFO  org.opendatakraken.core.db.DBConnection - Using property file localhost_sqlserver_test
+2015-12-03 14:06:14.015 [main] DEBUG org.opendatakraken.core.db.DBConnection - databaseDriver = com.microsoft.sqlserver.jdbc.SQLServerDriver
+2015-12-03 14:06:14.016 [main] DEBUG org.opendatakraken.core.db.DBConnection - connectionURL = jdbc:sqlserver://localhost:1433;database=test
+2015-12-03 14:06:14.221 [main] DEBUG org.opendatakraken.core.db.DBConnection - driver loaded
+2015-12-03 14:10:07.921 [main] INFO  org.opendatakraken.cli.Main - ###################################################################
+2015-12-03 14:10:07.923 [main] INFO  org.opendatakraken.cli.Main - START
+2015-12-03 14:10:07.923 [main] INFO  org.opendatakraken.cli.Main - Configure command line options
+2015-12-03 14:10:07.945 [main] INFO  org.opendatakraken.cli.Main - Options configured
+2015-12-03 14:10:07.948 [main] INFO  org.opendatakraken.cli.Main - Feature: tablecopy
+2015-12-03 14:10:07.948 [main] INFO  org.opendatakraken.cli.Main - Copy an entire schema, a single table or the result of a query from a database to another
+2015-12-03 14:10:07.951 [main] DEBUG org.opendatakraken.cli.Main - srcdbconnkeywordfile: No such option
+2015-12-03 14:10:07.951 [main] DEBUG org.opendatakraken.cli.Main - srcdbdriverclass: No such option
+2015-12-03 14:10:07.951 [main] DEBUG org.opendatakraken.cli.Main - srcdbconnectionurl: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - srcdbusername: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - srcdbpassword: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - trgdbconnkeywordfile: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - trgdbdriverclass: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - trgdbconnectionurl: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - trgdbusername: No such option
+2015-12-03 14:10:07.952 [main] DEBUG org.opendatakraken.cli.Main - trgdbpassword: No such option
+2015-12-03 14:10:07.952 [main] INFO  org.opendatakraken.cli.Main - Source and target connections prepared
+2015-12-03 14:10:07.953 [main] INFO  org.opendatakraken.cli.Main - Source schema: dbo
+2015-12-03 14:10:07.953 [main] INFO  org.opendatakraken.cli.Main - Source table: tab_test
+2015-12-03 14:10:07.953 [main] DEBUG org.opendatakraken.cli.Main - sourcequery: No such option
+2015-12-03 14:10:07.953 [main] INFO  org.opendatakraken.cli.Main - Source query: null
+2015-12-03 14:10:07.953 [main] INFO  org.opendatakraken.cli.Main - Target schema: dbo
+2015-12-03 14:10:07.953 [main] INFO  org.opendatakraken.cli.Main - Target table: stg_sqlserver_tab_test
+2015-12-03 14:10:07.953 [main] INFO  org.opendatakraken.core.db.DBConnection - Opening connection...
+2015-12-03 14:10:07.954 [main] INFO  org.opendatakraken.core.db.DBConnection - Using property file localhost_sqlserver_test
+2015-12-03 14:10:07.954 [main] DEBUG org.opendatakraken.core.db.DBConnection - databaseDriver = com.microsoft.sqlserver.jdbc.SQLServerDriver
+2015-12-03 14:10:07.954 [main] DEBUG org.opendatakraken.core.db.DBConnection - connectionURL = jdbc:sqlserver://localhost:1433;database=test
+2015-12-03 14:10:08.068 [main] DEBUG org.opendatakraken.core.db.DBConnection - driver loaded
