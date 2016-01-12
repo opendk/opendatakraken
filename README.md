@@ -32,7 +32,7 @@ Command: help
 
 Example (on Windows):
 ```
-bin\openbi help
+bin\opendatakraken help
 ```
 ## Generate TOAD project file
 Command: toadproject
@@ -44,7 +44,7 @@ Options:
 
 Example (on Windows):
 ```
-bin\openbi toadproject ^
+bin\opendatakraken toadproject ^
 	-toadprojectname oracle-dwh-objects ^
     -toadprojectfolder D:/DEV/projects/TOAD_projects ^
     -toadprojectfileslocation D:/DEV/projects/SVN/oracle-dwh-objects
@@ -62,7 +62,7 @@ Options:
 
 Example (on Windows):
 ```
-bin\openbi dbproperties ^
+bin\opendatakraken dbproperties ^
 	-dbconnpropertyfile localhost_mysql_test
 ```
 ## Copy a table or an entire schema from a RDBMS to another
@@ -94,7 +94,7 @@ _other options_
 
 Example (on Windows):
 ```
-bin\openbi tablecopy ^
+bin\opendatakraken tablecopy ^
 	-srcdbconnpropertyfile localhost_mysql_test ^
 	-sourcetable tab_test ^
 	-trgdbconnpropertyfile localhost_mysql_dwhstage ^
