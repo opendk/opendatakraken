@@ -55,10 +55,10 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '+'
 }
 
-uploadArchives {
+/*uploadArchives {
     repositories {
        flatDir {
            dirs 'repos'
        }
     }
-}
+}*/
