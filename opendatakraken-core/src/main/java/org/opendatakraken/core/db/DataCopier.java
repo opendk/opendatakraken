@@ -4,8 +4,6 @@ import java.util.*;
 import java.io.*;
 import java.sql.*;
 
-import javax.naming.*;
-import javax.sql.*;
 import javax.xml.parsers.*;
 
 import org.slf4j.LoggerFactory;

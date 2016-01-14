@@ -1,11 +1,6 @@
 package org.opendatakraken.core.db;
 
-import java.io.FileInputStream;
 import java.sql.*;
-import java.util.Properties;
-
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
 
 import org.slf4j.LoggerFactory;
 

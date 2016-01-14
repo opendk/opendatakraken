@@ -5,7 +5,6 @@ import org.opendatakraken.core.db.DBConnection;
 import org.opendatakraken.core.db.DataManipulator;
 import org.opendatakraken.core.db.StatementBuilder;
 import java.sql.PreparedStatement;
-import java.sql.Types;
 import java.io.*;
 
 import org.slf4j.LoggerFactory;

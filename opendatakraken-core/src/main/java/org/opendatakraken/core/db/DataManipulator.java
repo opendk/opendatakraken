@@ -1,12 +1,7 @@
 package org.opendatakraken.core.db;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.math.BigDecimal;
 import java.sql.*;
 
 import org.apache.commons.io.IOUtils;
-import org.opendatakraken.core.data.RandomDataGenerator;
 import org.slf4j.LoggerFactory;
 
 public class DataManipulator {
@@ -321,7 +316,9 @@ public class DataManipulator {
 			else if (
 				(
 					targetType.toUpperCase().contains("INT") &&
-					!targetType.toUpperCase().contains("BINTEXT")
+					!targetType.toUpperCase().contains("BINTEXT") &&
+					!targetProductName.toUpperCase().contains("HIVE") &&
+					!targetProductName.toUpperCase().contains("IMPALA")
 				) ||
 				(
 					sourceType.toUpperCase().contains("INT") &&
@@ -358,11 +355,15 @@ public class DataManipulator {
 				}
 			}
 			else if (
+				targetType.toUpperCase().contains("INT") ||
 			    targetType.toUpperCase().contains("MONEY") ||
 	    		targetType.toUpperCase().contains("NUMERIC") ||
 	    		targetType.toUpperCase().contains("DECIMAL")
 			) {
-				if (!targetProductName.toUpperCase().contains("HIVE")) {
+				if (
+					!targetProductName.toUpperCase().contains("HIVE") &&
+					!targetProductName.toUpperCase().contains("IMPALA")
+				) {
 					statement.setBigDecimal(position, resultSet.getBigDecimal(columnName));
 				}
 				else {

@@ -1,6 +1,5 @@
 package org.opendatakraken.dblibrary;
 
-import org.opendatakraken.core.db.DBConnection;
 import org.slf4j.LoggerFactory;
 
 public class DBLibraryManager {
@@ -8,7 +7,6 @@ public class DBLibraryManager {
 	static final org.slf4j.Logger logger = LoggerFactory.getLogger(DBLibraryManager.class);
 	
 	private String className;
-	private String name;
 	
 	Class<?> frameworkClass;
 	DBLibrary framework;

@@ -5,8 +5,6 @@ import javax.sql.rowset.*;
 
 import org.slf4j.LoggerFactory;
 
-import com.sun.rowset.*;
-
 /**
  * This class contains methods to perform DMLs (inserts, updates, deletes) on a RDBMS table.
  * @author marangon

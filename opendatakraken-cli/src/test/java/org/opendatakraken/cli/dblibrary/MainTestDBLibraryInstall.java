@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.opendatakraken.cli.Main;
-import org.opendatakraken.cli.prepare.PrepareSchemaHelper;
 
 public class MainTestDBLibraryInstall {
 	

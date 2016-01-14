@@ -1,11 +1,6 @@
 package org.opendatakraken.core.db;
 
-import java.io.*;
 import java.sql.*;
-import java.util.*;
-
-import javax.naming.*;
-import javax.sql.*;
 
 import org.slf4j.LoggerFactory;
 
