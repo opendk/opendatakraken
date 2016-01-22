@@ -6,7 +6,7 @@ version = '0.2'
 
 jar {
     manifest {
-		attributes 'Implementation-Title': 'OpenDataKrake Core', 'Implementation-Version': version
+        attributes 'Implementation-Title': 'OpenDataKrake Code', 'Implementation-Version': version
     }
 }
 
@@ -15,9 +15,9 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.apache.commons', name: 'commons-io', version: '+'
-    compile group: 'javax.mail', name: 'javax.mail-api', version: '+'
-    compile group: 'javax.jms', name: 'javax.jms-api', version: '+'
+    compile group: 'commons-collections', name: 'commons-collections', version: '+'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '+'
+    compile group: 'org.antlr', name: 'antlr4-runtime', version: '+'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '+'
     testCompile group: 'junit', name: 'junit', version: '+'
 }

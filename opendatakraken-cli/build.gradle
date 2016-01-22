@@ -8,7 +8,7 @@ mainClassName = 'org.opendatakraken.cli.Main'
 
 jar {
     manifest {
-		attributes 'Implementation-Title': 'Open Data Kraken CLI', 'Implementation-Version': version, 'Main-Class': mainClassName
+		attributes 'Implementation-Title': 'OpenDataKraken CLI', 'Implementation-Version': version, 'Main-Class': mainClassName
     }
 }
 

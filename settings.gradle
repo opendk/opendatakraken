@@ -1,1 +1,1 @@
-include "opendatakraken-core", "opendatakraken-etl", "opendatakraken-cli", "opendatakraken-repo", "opendatakraken-dblibrary", "opendatakraken-dblibrary-oracle", "opendatakraken-dblibrary-sqlsrv", "opendatakraken-lib", "opendatakraken-web"
+include "opendatakraken-core", "opendatakraken-code", "opendatakraken-etl", "opendatakraken-cli", "opendatakraken-repo", "opendatakraken-dblibrary", "opendatakraken-dblibrary-oracle", "opendatakraken-dblibrary-sqlsrv", "opendatakraken-lib", "opendatakraken-web"

@@ -45,6 +45,13 @@
 		<argName>parameter values</argName>
 	</option>
 	
+	<!-- Beautify options -->
+	<option>
+		<name>originaltext</name>
+		<description>Original text to beautify</description>
+		<argName>Original text</argName>
+	</option>
+	
 	<!-- Wrapper script options -->
 	<option>
 		<name>wrapperscript</name>

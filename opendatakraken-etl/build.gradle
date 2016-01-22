@@ -10,7 +10,7 @@ version = '0.1'
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+        attributes 'Implementation-Title': 'OpenDataKraken ETL', 'Implementation-Version': version
     }
 }
 

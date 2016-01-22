@@ -91,6 +91,11 @@ public class Main {
             dwsoDeploy();
         }
 
+        // Generate deployment file
+        if (feature.equalsIgnoreCase("codebeautify")) {
+            codeBeautify();
+        }
+
         // Send an email
         if (feature.equalsIgnoreCase("sendmail")) {
             sendEmail();
@@ -241,6 +246,12 @@ public class Main {
                 getOption("dwsofolder"),
                 getOption("dwsoinstallfile")
         );
+    }
+    
+    private static void codeBeautify() throws Exception {
+    	org.opendatakraken.code.Beautifier codeBeautifier = new org.opendatakraken.code.Beautifier();
+    	codeBeautifier.setOriginalText(getOption("originaltext"));
+    	codeBeautifier.process();
     }
 
     private static void sendEmail() throws Exception {
