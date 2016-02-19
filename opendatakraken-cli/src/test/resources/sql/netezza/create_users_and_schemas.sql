@@ -1,13 +1,13 @@
 -- TEST
-drop user test;
+drop schema test.testuser cascade;
 
-drop schema testdb.test cascade;
+drop user testuser;
 
-create user test with password 'test';
+create user testuser with password 'test';
 
-create schema testdb.test authorization test;
+create schema test.testuser authorization testuser;
 
-grant list on testdb to test;
+grant list on test to testuser;
 
 
 -- SugarCRM
