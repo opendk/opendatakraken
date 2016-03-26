@@ -37,8 +37,8 @@ public class Main {
         logger.info("###################################################################");
         logger.info("START");
 
-        // Get main feature from 1. argument
-        String feature = args[0];
+        // Get main action from 1. argument
+        String action = args[0];
         //
         String[] arguments = new String[args.length - 1];
 
@@ -70,74 +70,74 @@ public class Main {
             }
         }
 
-        logger.info("Feature: " + feature);
+        logger.info("Action: " + action);
         // Print help
-        if (feature.equalsIgnoreCase("help")) {
+        if (action.equalsIgnoreCase("help")) {
             help();
         }
 
         // Generate a TOAD project file
-        if (feature.equalsIgnoreCase("toadproject")) {
+        if (action.equalsIgnoreCase("toadproject")) {
             toadProject();
         }
 
         // Generate a Wrapper Script
-        if (feature.equalsIgnoreCase("wrapperscript")) {
+        if (action.equalsIgnoreCase("wrapperscript")) {
             wrapperScript();
         }
 
         // Generate deployment file
-        if (feature.equalsIgnoreCase("dwsodeploy")) {
+        if (action.equalsIgnoreCase("dwsodeploy")) {
             dwsoDeploy();
         }
 
         // Generate deployment file
-        if (feature.equalsIgnoreCase("codebeautify")) {
+        if (action.equalsIgnoreCase("codebeautify")) {
             codeBeautify();
         }
 
         // Send an email
-        if (feature.equalsIgnoreCase("sendmail")) {
+        if (action.equalsIgnoreCase("sendmail")) {
             sendEmail();
         }
 
         // Install back-end side framework components
-        if (feature.equalsIgnoreCase("installdblibrary")) {
+        if (action.equalsIgnoreCase("installdblibrary")) {
             installDBLibrary();
         }
 
         // Execute a stored procedure
-        if (feature.equalsIgnoreCase("executeprocedure")) {
+        if (action.equalsIgnoreCase("executeprocedure")) {
             executeProcedure();
         }
 
         // Get database properties
-        if (feature.equalsIgnoreCase("dbproperties")) {
+        if (action.equalsIgnoreCase("dbproperties")) {
             getDatabaseProperties();
         }
 
         // Copy tables between 2 databases
-        if (feature.equalsIgnoreCase("tablecopy")) {
+        if (action.equalsIgnoreCase("tablecopy")) {
             copyTables();
         }
 
         // Generate random data
-        if (feature.equalsIgnoreCase("generaterandomdata")) {
+        if (action.equalsIgnoreCase("generaterandomdata")) {
             generateRandomData();
         }
 
         // Import a series of csv files
-        if (feature.equalsIgnoreCase("importcsvseries")) {
+        if (action.equalsIgnoreCase("importcsvseries")) {
             importCSVSeries();
         }
 
         // Merge similar files
-        if (feature.equalsIgnoreCase("mergefiles")) {
+        if (action.equalsIgnoreCase("mergefiles")) {
             mergeFiles();
         }
 
         // Create XML definitions for common ETL software
-        if (feature.equalsIgnoreCase("createetlxml")) {
+        if (action.equalsIgnoreCase("createetlxml")) {
             createETLXML();
         }
         logger.info("FINISH");

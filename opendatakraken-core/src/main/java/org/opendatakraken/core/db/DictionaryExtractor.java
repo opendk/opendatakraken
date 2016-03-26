@@ -110,6 +110,13 @@ public class DictionaryExtractor {
     	return columnPkPositions;
     }
     
+    public boolean getTableExistance() {
+    	
+    	boolean tableExists = false;
+    	
+    	return tableExists;
+    }
+    
     // Execution methods
     public void retrieveColumns() throws Exception {
     	
