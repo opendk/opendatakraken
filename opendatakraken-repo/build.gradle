@@ -1,12 +1,15 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
 
 dependencies {
   compile project(':opendatakraken-core')
 }
 
 sourceCompatibility = '1.8'
-version = '0.1'
+version = '0.1.0'
 jar {
     manifest {
         attributes 'Implementation-Title': 'OpenDataKraken Repo', 'Implementation-Version': version
@@ -27,8 +30,39 @@ dependencies {
 
 uploadArchives {
     repositories {
-       flatDir {
-           dirs 'repos'
-       }
+		mavenDeployer {
+			repository(url: "file://C:/Software/Maven/")
+		}
     }
+}
+
+publishing {
+
+	repositories {
+	    mavenCentral()
+	}
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+            groupId 'org.opendatakraken'
+            artifactId 'opendatakraken-repo'
+            version '0.1.0'
+		}
+	}
+}
+
+bintray {
+    user = System.getenv("BINTRAY_USER")
+    key = System.getenv("BINTRAY_KEY")
+    pkg {
+        repo = 'maven'
+        name = 'opendatakraken-repo'
+        userOrg = 'opendk'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/opendk/opendatakraken.git'
+		version {
+			name = '0.1.0'
+        }
+    }
+	publications = ['mavenJava']
 }

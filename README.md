@@ -34,21 +34,6 @@ Example (on Windows):
 ```
 bin\opendatakraken help
 ```
-## Generate TOAD project file
-Command: toadproject
-
-Options:
-- toadprojectname = name of the project and of the .tpr file
-- toadprojectfolder = folder where the project file is generated
-- toadprojectfileslocation = location of the included files
-
-Example (on Windows):
-```
-bin\opendatakraken toadproject ^
-	-toadprojectname oracle-dwh-objects ^
-    -toadprojectfolder D:/DEV/projects/TOAD_projects ^
-    -toadprojectfileslocation D:/DEV/projects/SVN/oracle-dwh-objects
-```
 ## Print generic RDBMS properties
 Command: dbproperties
 
@@ -100,4 +85,19 @@ bin\opendatakraken tablecopy ^
 	-trgdbconnpropertyfile localhost_mysql_dwhstage ^
 	-targetschema dwhstage ^
 	-targettable stg_mys_tab_test
+```
+## Generate TOAD project file
+Command: toadproject
+
+Options:
+- toadprojectname = name of the project and of the .tpr file
+- toadprojectfolder = folder where the project file is generated
+- toadprojectfileslocation = location of the included files
+
+Example (on Windows):
+```
+bin\opendatakraken toadproject ^
+	-toadprojectname oracle-dwh-objects ^
+    -toadprojectfolder D:/DEV/projects/TOAD_projects ^
+    -toadprojectfileslocation D:/DEV/projects/SVN/oracle-dwh-objects
 ```

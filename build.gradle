@@ -1,6 +1,13 @@
+plugins {
+	id "com.jfrog.bintray" version "1.6"
+}
+
 apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
 
 allprojects {
     gradle.projectsEvaluated {
@@ -11,11 +18,11 @@ allprojects {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.12'
+	gradleVersion = '2.13'
 }
 
 sourceCompatibility = '1.8'
-version = '0.2'
+version = '0.2.0'
 mainClassName = 'org.opendatakraken.cli.Main'
 
 repositories {
@@ -29,22 +36,3 @@ dependencies {
 	compile project(':opendatakraken-repo')
 	compile project(':opendatakraken-cli')
 }
-
-/*subprojects {
-	apply plugin: 'java'
-	apply plugin: 'eclipse'
-
-	repositories {
-		mavenCentral()
-	}
-
-	dependencies {
-		testCompile 'junit:junit:*'
-	}
-
-	version = '1.0'
-
-	jar {
-		manifest.attributes provider: 'Open Data Kraken'
-	}
-}*/

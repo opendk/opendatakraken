@@ -2,9 +2,12 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'eclipse-wtp'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
 
 sourceCompatibility = '1.8'
-version = '0.1'
+version = '0.1.0'
 
 jar {
     manifest {
@@ -14,17 +17,53 @@ jar {
 
 repositories {
     mavenCentral()
+	maven {
+		url "https://dl.bintray.com/opendk/maven"
+	}
 }
 
 dependencies {
+    //compile group: 'org.opendatakraken', name: 'opendatakraken-core', version: '+'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.+'
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
 uploadArchives {
     repositories {
-       flatDir {
-           dirs 'repos'
-       }
+		mavenDeployer {
+			repository(url: "file://C:/Software/Maven/")
+		}
     }
 }
+
+publishing {
+
+	repositories {
+	    mavenCentral()
+	}
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+            groupId 'org.opendatakraken'
+            artifactId 'opendatakraken-web'
+            version '0.1.0'
+		}
+	}
+}
+
+bintray {
+    user = System.getenv("BINTRAY_USER")
+    key = System.getenv("BINTRAY_KEY")
+    pkg {
+        repo = 'maven'
+        name = 'opendatakraken-web'
+        userOrg = 'opendk'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/opendk/opendatakraken.git'
+		version {
+			name = '0.1.0'
+        }
+    }
+	publications = ['mavenJava']
+}
+

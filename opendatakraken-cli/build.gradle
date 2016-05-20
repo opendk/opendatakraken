@@ -1,9 +1,13 @@
 apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
 
 sourceCompatibility = '1.8'
-version = '0.2'
+version = '0.2.0'
 mainClassName = 'org.opendatakraken.cli.Main'
 
 jar {
@@ -14,9 +18,6 @@ jar {
 
 repositories {
     mavenCentral()
-    /*maven {
-        url "https://repository.cloudera.com/artifactory/cloudera-repos"
-    }*/
 }
 
 dependencies {
@@ -56,10 +57,41 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '+'
 }
 
-/*uploadArchives {
+uploadArchives {
     repositories {
-       flatDir {
-           dirs 'repos'
-       }
+		mavenDeployer {
+			repository(url: "file://C:/Software/Maven/")
+		}
     }
-}*/
+}
+
+publishing {
+
+	repositories {
+	    mavenCentral()
+	}
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+            groupId 'org.opendatakraken'
+            artifactId 'opendatakraken-cli'
+            version '0.2.0'
+		}
+	}
+}
+
+bintray {
+    user = System.getenv("BINTRAY_USER")
+    key = System.getenv("BINTRAY_KEY")
+    pkg {
+        repo = 'maven'
+        name = 'opendatakraken-cli'
+        userOrg = 'opendk'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/opendk/opendatakraken.git'
+		version {
+			name = '0.2.0'
+        }
+    }
+	publications = ['mavenJava']
+}
