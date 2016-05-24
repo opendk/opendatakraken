@@ -1,0 +1,8 @@
+{"odkType": {
+	"BIT": {
+		"odkType": "BIT",
+		"equivalentTypeName": "VARCHAR",
+		"maxLength": 256,
+		"oversizeTypeName": "VARCHAR"
+	}
+}}

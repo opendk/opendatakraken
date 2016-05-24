@@ -26,12 +26,6 @@
 	</dbType>
 	<dbType>
 	    <typeName>BYTEINT</typeName>
-	    <option>
-			<productName>DEFAULT</productName>
-	    	<lengthOption>false</lengthOption>
-	    </option>
-	</dbType>
-	<dbType>
 	    <typeName>TINYINT</typeName>
 	    <option>
 			<productName>DEFAULT</productName>

@@ -3,6 +3,7 @@
 	<!-- Other -->
 	<!-- Boolean -->
 	<jdbcType>
+		<odkType>BOOLEAN</odkType>
 	    <typeId>16</typeId>
 	    <typeName>BOOL</typeName>
 	    <typeName>BOOLEAN</typeName>
@@ -41,6 +42,7 @@
 	</jdbcType>
 	<!-- Integer -->
 	<jdbcType>
+		<odkType>BIT</odkType>
 	    <typeId>-7</typeId>
 	    <typeName>BIT</typeName>
 	    <typeName>BIT VARYING</typeName>
@@ -68,6 +70,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>TINYINT</odkType>
 	    <typeId>-6</typeId>
 	    <typeName>TINYINT</typeName>
 	    <typeName>BYTEINT</typeName>
@@ -110,6 +113,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>SMALLINT</odkType>
 	    <typeId>5</typeId>
 	    <typeName>SMALLINT</typeName>
 	    <dbType>
@@ -123,6 +127,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>INT</odkType>
 	    <typeId>4</typeId>
 	    <typeName>INTEGER</typeName>
 	    <typeName>INT</typeName>
@@ -143,6 +148,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>BIGINT</odkType>
 	    <typeId>-5</typeId>
 	    <typeName>BIGINT</typeName>
 	    <typeName>INT8</typeName>
@@ -159,6 +165,7 @@
 	</jdbcType>
 	<!-- Decimal -->
 	<jdbcType>
+		<odkType>DECIMAL</odkType>
 	    <typeId>2</typeId>
 	    <typeId>3</typeId>
 	    <typeName>DECIMAL</typeName>
@@ -193,6 +200,7 @@
 	</jdbcType>
 	<!-- Approximate -->
 	<jdbcType>
+		<odkType>FLOAT</odkType>
 	    <typeId>6</typeId>
 	    <typeName>FLOAT</typeName>
 	    <typeName>SMALLFLOAT</typeName>
@@ -221,6 +229,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>REAL</odkType>
 	    <typeId>7</typeId>
 	    <typeName>REAL</typeName>
 	    <dbType>
@@ -241,6 +250,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>DOUBLE</odkType>
 	    <typeId>8</typeId>
 	    <typeName>DOUBLE</typeName>
 	    <typeName>DECFLOAT</typeName>
@@ -280,6 +290,7 @@
 	</jdbcType>
 	<!-- Date/Time -->
 	<jdbcType>
+		<odkType>DATETIME</odkType>
 	    <typeId>91</typeId>
 	    <typeName>DATE</typeName>
 	    <typeName>DATETIME</typeName>
@@ -338,6 +349,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>TIME</odkType>
 	    <typeId>92</typeId>
 	    <typeName>TIME</typeName>
 	    <dbType>
@@ -367,6 +379,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>TIMETZ</odkType>
 	    <typeName>TIME WITH TIME ZONE</typeName>
 	    <typeName>TIMETZ</typeName>
 	    <dbType>
@@ -420,6 +433,7 @@
 	    -->
 	</jdbcType>
 	<jdbcType>
+		<odkType>TIMESTAMP</odkType>
 	    <typeId>93</typeId>
 	    <typeName>TIMESTAMP</typeName>
 	    <dbType>
@@ -473,6 +487,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>TIMESTAMPTZ</odkType>
 	    <typeName>TIMESTAMP WITH TIME ZONE</typeName>
 	    <typeName>TIMESTAMP WITH LOCAL TIME ZONE</typeName>
 	    <typeName>TIMESTAMPTZ</typeName>
@@ -552,6 +567,7 @@
 	</jdbcType>
 	<!-- Intervals -->
 	<jdbcType>
+		<odkType>INTERVALYM</odkType>
 	    <typeName>INTERVAL YEAR TO MONTH</typeName>
 	    <typeName>INTERVALYM</typeName>
 	    <dbType>
@@ -601,6 +617,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>INTERVALDS</odkType>
 	    <typeName>INTERVAL DAY TO SECOND</typeName>
 	    <typeName>INTERVALDS</typeName>
 	    <dbType>
@@ -651,6 +668,7 @@
 	</jdbcType>
 	<!-- Strings -->
 	<jdbcType>
+		<odkType>STRING</odkType>
 	    <typeId>1</typeId>
 	    <typeId>12</typeId>
 	    <typeId>-1</typeId>
@@ -774,6 +792,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>NSTRING</odkType>
 	    <typeId>-15</typeId>
 	    <typeId>-9</typeId>
 	    <typeId>-16</typeId>
@@ -900,6 +919,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>BIGSTRING</odkType>
 	    <typeId>2005</typeId>
 	    <typeName>CLOB</typeName>
 	    <typeName>LONG</typeName>
@@ -951,6 +971,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>BIGNSTRING</odkType>
 	    <typeId>2011</typeId>
 	    <typeName>TEXT</typeName>
 	    <typeName>MEDIUMTEXT</typeName>
@@ -1046,6 +1067,7 @@
 	</jdbcType>
 	<!-- Binary data -->
 	<jdbcType>
+		<odkType>BINARY</odkType>
 	    <typeId>-2</typeId>
 	    <typeId>-3</typeId>
 	    <typeId>-4</typeId>
@@ -1154,6 +1176,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>BIGBINARY</odkType>
 	    <typeId>2004</typeId>
 	    <typeName>BLOB</typeName>
 	    <typeName>TINYBLOB</typeName>
@@ -1221,6 +1244,7 @@
 	</jdbcType>
 	<!-- XML and JSON -->
 	<jdbcType>
+		<odkType>XML</odkType>
 	    <typeName>XML</typeName>
 	    <typeName>XMLTYPE</typeName>
 	    <dbType>
@@ -1283,6 +1307,7 @@
 	    </dbType>
 	</jdbcType>
 	<jdbcType>
+		<odkType>JSON</odkType>
 	    <typeName>JSON</typeName>
 	    <typeName>SDO_RASTER</typeName>
 	    <typeName>SDO_GEOMETRY</typeName>
