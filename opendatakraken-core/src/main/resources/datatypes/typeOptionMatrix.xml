@@ -369,7 +369,6 @@
 	    <typeName>LONGBLOB</typeName>
 	    <typeName>BYTEA</typeName>
 	    <typeName>BFILE</typeName>
-	    <typeName>STRING</typeName>
 	    <option>
 			<productName>DEFAULT</productName>
 	    	<lengthOption>true</lengthOption>

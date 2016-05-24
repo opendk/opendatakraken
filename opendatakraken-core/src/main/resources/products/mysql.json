@@ -1,8 +1,66 @@
-{"odkType": {
-	"BIT": {
-		"odkType": "BIT",
-		"equivalentTypeName": "VARCHAR",
-		"maxLength": 256,
-		"oversizeTypeName": "VARCHAR"
+{"typeConversion": {
+	"BIT": [
+		{"targetTypeName": "VARCHAR", "maxLength": 255},
+		{"targetTypeName": "TEXT"}
+	],
+	"REAL": [
+		{"targetTypeName": "FLOAT"}
+	],
+	"STRING": [
+		{"targetTypeName": "VARCHAR", "maxLength": 255},
+		{"targetTypeName": "TEXT", "maxLength": 65535},
+		{"targetTypeName": "MEDIUMTEXT", "maxLength": 16777215},
+		{"targetTypeName": "LONGTEXT"}
+	],
+	"NSTRING": [
+		{"targetTypeName": "NVARCHAR", "maxLength": 255},
+		{"targetTypeName": "TEXT", "maxLength": 65535},
+		{"targetTypeName": "MEDIUMTEXT", "maxLength": 16777215},
+		{"targetTypeName": "LONGTEXT"}
+	],
+	"BIGSTRING": [
+		{"targetTypeName": "LONGTEXT"}
+	],
+	"BIGNSTRING": [
+		{"targetTypeName": "LONGTEXT"}
+	],
+	"BINARY": [
+		{"targetTypeName": "VARBINARY", "maxLength": 255},
+		{"targetTypeName": "BLOB", "maxLength": 65535},
+		{"targetTypeName": "MEDIUMBLOB", "maxLength": 16777215},
+		{"targetTypeName": "LONGBLOB"}
+	],
+	"BIGBINARY": [
+		{"targetTypeName": "LONGBLOB"}
+	],
+	"XML": [
+		{"targetTypeName": "LONGTEXT"}
+	],
+	"JSON": [
+		{"targetTypeName": "LONGTEXT"}
+	]},
+"typeOptions": [
+	{
+		"typeNames": ["BIT","FLOAT","DECFLOAT"],
+		"lengthOption": true
+	},
+	{
+		"typeNames": ["DOUBLE","NUMERIC"],
+		"maxDataLength": 65,
+		"maxDataScale": 30
+	},
+	{
+		"typeNames": ["DECIMAL","DOUBLE PRECISION"],
+		"lengthOption": true,
+		"scaleOption": true
+	},
+	{
+		"typeNames": ["CHAR","VARCHAR","VARCHAR2","NCHAR","NVARCHAR","NVARCHAR2","ALPHANUM","GRAPHIC","VARGRAPHIC","BINARY","VARBINARY","VARBYTE","BINARYVAR"],
+		"maxDataLength": 255
+	},
+	{
+		"typeNames": ["LVARCHAR","CLOB","NCLOB","STRING","TEXT","NTEXT","TINYTEXT","MEDIUMTEXT","LONGTEXT","BINTEXT","BLOB","TINYBLOB","MEDIUMBLOB","LONGBLOB","BYTEA","BFILE"],
+		"lengthOption": false
 	}
-}}
+	]
+}
