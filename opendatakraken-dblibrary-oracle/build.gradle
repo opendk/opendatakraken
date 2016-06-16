@@ -4,14 +4,21 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
+
 sourceCompatibility = '1.8'
 version = '0.1.0'
+
+
 jar {
     manifest {
         attributes 'Implementation-Title': 'OpenDataKraken Oracle', 'Implementation-Version': version
     }
 }
 
+task sourceJar(type: Jar) {
+	from sourceSets.main.allJava
+	classifier "sources"
+}
 repositories {
     mavenCentral()
 }
@@ -24,6 +31,10 @@ dependencies {
 
 test {
     systemProperties 'property': 'value'
+}
+
+artifacts {
+	archives sourceJar
 }
 
 uploadArchives {
@@ -42,6 +53,7 @@ publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
+            artifact sourceJar
             groupId 'org.opendatakraken'
             artifactId 'opendatakraken-dblibrary-oracle'
             version '0.1.0'

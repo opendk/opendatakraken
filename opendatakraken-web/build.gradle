@@ -66,4 +66,3 @@ bintray {
     }
 	publications = ['mavenJava']
 }
-

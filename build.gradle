@@ -22,7 +22,7 @@ task wrapper(type: Wrapper) {
 }
 
 sourceCompatibility = '1.8'
-version = '0.2.0'
+version = '0.1.0'
 mainClassName = 'org.opendatakraken.cli.Main'
 
 repositories {

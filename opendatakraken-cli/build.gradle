@@ -7,13 +7,18 @@ apply plugin: 'com.jfrog.bintray'
 
 
 sourceCompatibility = '1.8'
-version = '0.2.0'
+version = '0.1.0'
 mainClassName = 'org.opendatakraken.cli.Main'
 
 jar {
     manifest {
 		attributes 'Implementation-Title': 'OpenDataKraken CLI', 'Implementation-Version': version, 'Main-Class': mainClassName
     }
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+	classifier "sources"
 }
 
 repositories {
@@ -57,6 +62,10 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '+'
 }
 
+artifacts {
+	archives sourceJar
+}
+
 uploadArchives {
     repositories {
 		mavenDeployer {
@@ -73,9 +82,10 @@ publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
+            artifact sourceJar 
             groupId 'org.opendatakraken'
             artifactId 'opendatakraken-cli'
-            version '0.2.0'
+            version '0.1.0'
 		}
 	}
 }
@@ -90,7 +100,7 @@ bintray {
         licenses = ['MIT']
         vcsUrl = 'https://github.com/opendk/opendatakraken.git'
 		version {
-			name = '0.2.0'
+			name = '0.1.0'
         }
     }
 	publications = ['mavenJava']

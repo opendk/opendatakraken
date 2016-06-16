@@ -5,13 +5,20 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 apply plugin: 'com.jfrog.bintray'
 
+
 sourceCompatibility = '1.8'
-version = '0.2.2'
+version = '0.1.0'
+
 
 jar {
     manifest {
 		attributes 'Implementation-Title': 'OpenDataKrake Core', 'Implementation-Version': version
     }
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+	classifier "sources"
 }
 
 repositories {
@@ -24,6 +31,10 @@ dependencies {
     compile group: 'javax.jms', name: 'javax.jms-api', version: '+'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '+'
     testCompile group: 'junit', name: 'junit', version: '+'
+}
+
+artifacts {
+	archives sourceJar
 }
 
 uploadArchives {
@@ -42,9 +53,10 @@ publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
+            artifact sourceJar
             groupId 'org.opendatakraken'
             artifactId 'opendatakraken-core'
-            version '0.2.2'
+            version '0.1.0'
 		}
 	}
 }
@@ -59,7 +71,7 @@ bintray {
         licenses = ['MIT']
         vcsUrl = 'https://github.com/opendk/opendatakraken.git'
 		version {
-			name = '0.2.2'
+			name = '0.1.0'
         }
     }
 	publications = ['mavenJava']
