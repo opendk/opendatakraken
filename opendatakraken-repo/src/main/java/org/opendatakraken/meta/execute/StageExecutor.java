@@ -75,6 +75,8 @@ public class StageExecutor {
 		
 		query = em.createQuery("SELECT x FROM StageSource x WHERE x.etlStageSourceCode = ?1"); 
 		query.setParameter(1, stageSourceCode);
+		
+		@SuppressWarnings("unchecked")
 		List<StageSource> sources = query.getResultList();
 		
 		// get source objects and dbs
@@ -107,8 +109,11 @@ public class StageExecutor {
 			if (stageObjectName == null || stageObjectName.equals("") || object.getEtlStageObjectName().equalsIgnoreCase(stageObjectName)) {
 				LOGGER.info("Source: " + stageSourceCode + " - Object: " + object.getEtlStageObjectName() + " - BEGIN");
 				query = em.createQuery("SELECT x FROM StageColumn x WHERE x.etlStageObjectId = ?1 AND x.etlStageColumnNameMap <> x.etlStageColumnName AND LENGTH(x.etlStageColumnNameMap)>0");
-				query.setParameter(1, object.getEtlStageObjectId()); 
+				query.setParameter(1, object.getEtlStageObjectId());
+				
+				@SuppressWarnings("unchecked")
 				List<StageColumn> columns = query.getResultList();
+				
 				srcMapColumns = new String[columns.size()];
 				trgMapColumns = new String[columns.size()];
 				int i = 0;

@@ -62,7 +62,9 @@ public class ScriptGenerator {
 		Query query;
 		
 		query = em.createQuery("SELECT x FROM StageSource x WHERE x.etlStageSourceCode = ?1"); 
-		query.setParameter(1, stageSourceCode);		
+		query.setParameter(1, stageSourceCode);
+		
+		@SuppressWarnings("unchecked")
 		List<StageSource> sources = query.getResultList();
 		
 		// get source objects and dbs

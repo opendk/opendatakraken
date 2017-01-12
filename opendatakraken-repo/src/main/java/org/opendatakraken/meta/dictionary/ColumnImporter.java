@@ -45,7 +45,9 @@ public class ColumnImporter {
 		
 		// get source
 		query = em.createQuery("SELECT x FROM StageSource x WHERE x.etlStageSourceCode = ?1"); 
-		query.setParameter(1, stageSourceCode);		
+		query.setParameter(1, stageSourceCode);
+		
+		@SuppressWarnings("unchecked")
 		List<StageSource> sources = query.getResultList();
 		
 		// get source objects and dbs
@@ -93,6 +95,8 @@ public class ColumnImporter {
 				query = em.createQuery("SELECT x FROM StageColumn x WHERE x.etlStageObjectId = ?1 AND x.etlStageColumnName = ?2"); 
 				query.setParameter(1, object.getEtlStageObjectId());
 				query.setParameter(2, colNames[i]);
+				
+				@SuppressWarnings("unchecked")
 				List<StageColumn> columns = query.getResultList();
 				
 				StageColumn column;
