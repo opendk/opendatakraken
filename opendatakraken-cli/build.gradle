@@ -1,10 +1,13 @@
+plugins {
+	id "nebula.deb" version "4.4.0"
+}
+
 apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
-
 
 sourceCompatibility = '1.8'
 version = '0.1.0'
@@ -85,7 +88,7 @@ publishing {
             artifact sourceJar 
             groupId 'org.opendatakraken'
             artifactId 'opendatakraken-cli'
-            version '0.1.0'
+            version version
 		}
 	}
 }
@@ -100,7 +103,7 @@ bintray {
         licenses = ['MIT']
         vcsUrl = 'https://github.com/opendk/opendatakraken.git'
 		version {
-			name = '0.1.0'
+			name = version
         }
     }
 	publications = ['mavenJava']
