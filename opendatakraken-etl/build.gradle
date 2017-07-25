@@ -45,7 +45,9 @@ uploadArchives {
 publishing {
 
 	repositories {
-	    mavenCentral()
+		maven {
+			url "C:/Software/Maven"
+		}
 	}
 	publications {
 		mavenJava(MavenPublication) {

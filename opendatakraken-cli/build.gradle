@@ -2,9 +2,10 @@ plugins {
 	id "nebula.deb" version "4.4.0"
 }
 
+apply plugin: 'base'
+apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
@@ -42,7 +43,7 @@ dependencies {
 	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '+'
 	compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '+'
 	// JDBC Drivers
-    compile group: 'mysql', name: 'mysql-connector-java', version: '+'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.+'
     compile group: 'org.postgresql', name: 'postgresql', version: '+'
     compile group: 'org.firebirdsql.jdbc', name: 'jaybird', version: '+'
     compile group: 'net.sourceforge.jtds', name: 'jtds', version: '+'
@@ -80,7 +81,9 @@ uploadArchives {
 publishing {
 
 	repositories {
-	    mavenCentral()
+		maven {
+			url "C:/Software/Maven"
+		}
 	}
 	publications {
 		mavenJava(MavenPublication) {
