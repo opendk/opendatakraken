@@ -1,7 +1,11 @@
 -- TEST
-drop user test;
+drop user if exists test;
 
-create user test@`%` identified by 'test';
+create user if not exists test@`%` identified by 'test';
+
+drop database if exists test;
+
+create database if not exists test;
 
 grant all privileges on test.* to test;
 
