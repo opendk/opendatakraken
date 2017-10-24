@@ -1,118 +1,147 @@
-{"typeConversion": {
-	"BOOLEAN": {
-		"sourceTypeIds": [16],
-		"sourceTypeNames": ["BOOLEAN","BOOL"],
-		"targetTypeName": "BOOLEAN"},
-	"BIT": {
-		"sourceTypeIds": [7],
-		"sourceTypeNames": ["BIT","BIT VARYING"],
-		"targetTypeName": "VARCHAR"},
-	"TINYINT": {
-		"sourceTypeIds": [6],
-		"sourceTypeNames": ["TINYINT","BYTEINT"],
-		"targetTypeName": "TINYINT"},
-	"SMALLINT": {
-		"sourceTypeIds": [5],
-		"sourceTypeNames": ["SMALLINT"],
-		"targetTypeName": "SMALLINT"},
-	"INT": {
-		"sourceTypeIds": [4],
-		"sourceTypeNames": ["INT","INTEGER","MEDIUMINT","SERIAL"],
-		"targetTypeName": "INTEGER"},
-	"BIGINT": {
-		"sourceTypeIds": [5],
-		"sourceTypeNames": ["BIGINT","INT8","MONEY"],
-		"targetTypeName": "INTEGER"},
-	"DECIMAL": {
-		"sourceTypeIds": [2,3],
-		"sourceTypeNames": ["DECIMAL","SMALLDECIMAL","NUMERIC","NUMBER","N"],
-		"targetTypeName": "NUMERIC"},
-	"FLOAT": {
-		"sourceTypeIds": [6],
-		"sourceTypeNames": ["FLOAT","SMALLFLOAT","BINARY_FLOAT"],
-		"targetTypeName": "FLOAT"},
-	"REAL": {
-		"sourceTypeIds": [7],
-		"sourceTypeNames": ["REAL"],
-		"targetTypeName": "REAL"},
-	"DOUBLE": {
-		"sourceTypeIds": [8],
-		"sourceTypeNames": ["DOUBLE","DECFLOAT","BINARY_DOUBLE"],
-		"targetTypeName": "DOUBLE"},
-	"DATETIME": {
-		"sourceTypeIds": [91],
-		"sourceTypeNames": ["DATETIME","DATE","DATETIME2","SMALLDATETIME","SECONDDATE","YEAR"],
-		"targetTypeName": "DATETIME"},
-	"TIME": {
-		"sourceTypeIds": [92],
-		"sourceTypeNames": ["TIME"],
-		"targetTypeName": "TIME"},
-	"TIMESTAMP": {
-		"sourceTypeIds": [93],
-		"sourceTypeNames": ["TIMESTAMP"],
-		"targetTypeName": "DATETIME"},
-	"TIMETZ": {
-		"sourceTypeNames": ["TIMETZ","TIME WITH TIME ZONE"],
-		"targetTypeName": "VARCHAR"},
-	"TIMESTAMPTZ": {
-		"sourceTypeNames": ["TIMESTAMPTZ","TIMESTAMP WITH TIME ZONE","TIMESTAMP WITH LOCAL TIME ZONE","DATETIMEOFFSET"],
-		"targetTypeName": "VARCHAR"},
-	"INTERVALYM": {
-		"sourceTypeNames": ["INTERVALYM","INTERVAL YEAR TO MONTH"],
-		"targetTypeName": "VARCHAR"},
-	"INTERVALDS": {
-		"sourceTypeNames": ["INTERVALDS","DAY TO SECOND"],
-		"targetTypeName": "VARCHAR"},
-	"STRING": {
-		"sourceTypeIds": [1,12,-1],
-		"sourceTypeNames": ["CHAR","VARCHAR","VARCHAR2","LONGVARCHAR","LONG VARCHAR","ALPHANUM","VARBIT","LONG VARBIT","TXID","UUID","CIDR","INET","MACADDR","HIERARCHYID","UNIQUEIDENTIFIER","GEOGRAPHY","GEOMETRY","ROWID","ENUM","SET"],
-		"targetTypeName": "VARCHAR"},
-	"NSTRING": {
-		"sourceTypeIds": [-9,-15,-16],
-		"sourceTypeNames": ["NCHAR","NVARCHAR","NVARCHAR2","NVCHAR","LONGNVARCHAR","LONG NVARCHAR","LVARCHAR","GRAPHIC","VARGRAPHIC","TINYTEXT"],
-		"targetTypeName": "NVARCHAR"},
-	"BIGSTRING": {
-		"sourceTypeIds": [2005],
-		"sourceTypeNames": ["CLOB","LONG"],
-		"targetTypeName": "CLOB"},
-	"BIGNSTRING": {
-		"sourceTypeIds": [2011],
-		"sourceTypeNames": ["TEXT","MEDIUMTEXT","LONGTEXT","BINTEXT","NCLOB","DBCLOB","STRING","TSQUERY","TSVECTOR","BOX","CIRCLE","LINE","LSEG","PATH","POINT","POLYGON"],
-		"targetTypeName": "NCLOB"},
-	"BINARY": {
-		"sourceTypeIds": [-2,-3,-4],
-		"sourceTypeNames": ["BINARY","VARBINARY","VARBYTE","BINARYVAR","LONGVARBINARY","BINARY18","CHAR FOR BIT DATA","VARCHAR FOR BIT DATA","LONG VARCHAR FOR BIT DATA","RAW"],
-		"targetTypeName": "VARBINARY"},
-	"BIGBINARY": {
-		"sourceTypeIds": [2004],
-		"sourceTypeNames": ["BLOB","TINYBLOB","MEDIUMBLOB","LONGBLOB","BYTE","BYTEA","BFILE","IMAGE","LONG RAW"],
-		"targetTypeName": "BLOB"},
-	"XML": {
-		"sourceTypeNames": ["XML","XMLTYPE"],
-		"targetTypeName": "CLOB"},
-	"JSON": {
-		"sourceTypeNames": ["JSON","SDO_RASTER","SDO_GEOMETRY"],
-		"targetTypeName": "CLOB"}
+{
+	"typeConversion": {
+		"BOOLEAN": {
+			"sourceTypeIds": [16],
+			"sourceTypeNames": ["BOOLEAN", "BOOL"],
+			"targetTypeName": "BOOLEAN"
+		},
+		"BIT": {
+			"sourceTypeIds": [7],
+			"sourceTypeNames": ["BIT", "BIT VARYING"],
+			"targetTypeName": "VARCHAR"
+		},
+		"TINYINT": {
+			"sourceTypeIds": [6],
+			"sourceTypeNames": ["TINYINT", "BYTEINT"],
+			"targetTypeName": "TINYINT"
+		},
+		"SMALLINT": {
+			"sourceTypeIds": [5],
+			"sourceTypeNames": ["SMALLINT"],
+			"targetTypeName": "SMALLINT"
+		},
+		"INT": {
+			"sourceTypeIds": [4],
+			"sourceTypeNames": ["INT", "INTEGER", "MEDIUMINT", "SERIAL"],
+			"targetTypeName": "INTEGER"
+		},
+		"BIGINT": {
+			"sourceTypeIds": [5],
+			"sourceTypeNames": ["BIGINT", "INT8", "MONEY"],
+			"targetTypeName": "INTEGER"
+		},
+		"DECIMAL": {
+			"sourceTypeIds": [2, 3],
+			"sourceTypeNames": ["DECIMAL", "SMALLDECIMAL", "NUMERIC", "NUMBER", "N"],
+			"targetTypeName": "NUMERIC"
+		},
+		"FLOAT": {
+			"sourceTypeIds": [6],
+			"sourceTypeNames": ["FLOAT", "SMALLFLOAT", "BINARY_FLOAT"],
+			"targetTypeName": "FLOAT"
+		},
+		"REAL": {
+			"sourceTypeIds": [7],
+			"sourceTypeNames": ["REAL"],
+			"targetTypeName": "REAL"
+		},
+		"DOUBLE": {
+			"sourceTypeIds": [8],
+			"sourceTypeNames": ["DOUBLE", "DECFLOAT", "BINARY_DOUBLE"],
+			"targetTypeName": "DOUBLE"
+		},
+		"DATETIME": {
+			"sourceTypeIds": [91],
+			"sourceTypeNames": ["DATETIME", "DATE", "DATETIME2", "SMALLDATETIME", "SECONDDATE", "YEAR"],
+			"targetTypeName": "DATETIME"
+		},
+		"TIME": {
+			"sourceTypeIds": [92],
+			"sourceTypeNames": ["TIME"],
+			"targetTypeName": "TIME"
+		},
+		"TIMESTAMP": {
+			"sourceTypeIds": [93],
+			"sourceTypeNames": ["TIMESTAMP"],
+			"targetTypeName": "DATETIME"
+		},
+		"TIMETZ": {
+			"sourceTypeNames": ["TIMETZ", "TIME WITH TIME ZONE"],
+			"targetTypeName": "VARCHAR"
+		},
+		"TIMESTAMPTZ": {
+			"sourceTypeNames": ["TIMESTAMPTZ", "TIMESTAMP WITH TIME ZONE", "TIMESTAMP WITH LOCAL TIME ZONE", "DATETIMEOFFSET"],
+			"targetTypeName": "VARCHAR"
+		},
+		"INTERVALYM": {
+			"sourceTypeNames": ["INTERVALYM", "INTERVAL YEAR TO MONTH"],
+			"targetTypeName": "VARCHAR"
+		},
+		"INTERVALDS": {
+			"sourceTypeNames": ["INTERVALDS", "DAY TO SECOND"],
+			"targetTypeName": "VARCHAR"
+		},
+		"STRING": {
+			"sourceTypeIds": [1, 12, -1],
+			"sourceTypeNames": ["CHAR", "VARCHAR", "VARCHAR2", "LONGVARCHAR", "LONG VARCHAR", "ALPHANUM", "VARBIT", "LONG VARBIT", "TXID", "UUID", "CIDR", "INET", "MACADDR", "HIERARCHYID", "UNIQUEIDENTIFIER", "GEOGRAPHY", "GEOMETRY", "ROWID", "ENUM", "SET"],
+			"targetTypeName": "VARCHAR"
+		},
+		"NSTRING": {
+			"sourceTypeIds": [-9, -15, -16],
+			"sourceTypeNames": ["NCHAR", "NVARCHAR", "NVARCHAR2", "NVCHAR", "LONGNVARCHAR", "LONG NVARCHAR", "LVARCHAR", "GRAPHIC", "VARGRAPHIC", "TINYTEXT"],
+			"targetTypeName": "NVARCHAR"
+		},
+		"BIGSTRING": {
+			"sourceTypeIds": [2005],
+			"sourceTypeNames": ["CLOB", "LONG"],
+			"targetTypeName": "CLOB"
+		},
+		"BIGNSTRING": {
+			"sourceTypeIds": [2011],
+			"sourceTypeNames": ["TEXT", "MEDIUMTEXT", "LONGTEXT", "BINTEXT", "NCLOB", "DBCLOB", "STRING", "TSQUERY", "TSVECTOR", "BOX", "CIRCLE", "LINE", "LSEG", "PATH", "POINT", "POLYGON"],
+			"targetTypeName": "NCLOB"
+		},
+		"BINARY": {
+			"sourceTypeIds": [-2, -3, -4],
+			"sourceTypeNames": ["BINARY", "VARBINARY", "VARBYTE", "BINARYVAR", "LONGVARBINARY", "BINARY18", "CHAR FOR BIT DATA", "VARCHAR FOR BIT DATA", "LONG VARCHAR FOR BIT DATA", "RAW"],
+			"targetTypeName": "VARBINARY"
+		},
+		"BIGBINARY": {
+			"sourceTypeIds": [2004],
+			"sourceTypeNames": ["BLOB", "TINYBLOB", "MEDIUMBLOB", "LONGBLOB", "BYTE", "BYTEA", "BFILE", "IMAGE", "LONG RAW"],
+			"targetTypeName": "BLOB"
+		},
+		"XML": {
+			"sourceTypeNames": ["XML", "XMLTYPE"],
+			"targetTypeName": "CLOB"
+		},
+		"JSON": {
+			"sourceTypeNames": ["JSON", "SDO_RASTER", "SDO_GEOMETRY"],
+			"targetTypeName": "CLOB"
+		}
 	},
-"typeOptions": [
-	{"typeNames": [
-		"BOOLEAN","BIT","BYTEINT","TINYINT","SMALLINT","INT","INTEGER","BIGINT","REAL","DOUBLE","DOUBLE PRECISION",
-		"DATE","TIME","TIMETZ","TIME WITH TIME ZONE","SECONDDATE","DATETIME","DATETIMEOFFSET","TIMESTAMP","TIMESTAMPTZ","TIMESTAMP WITH TIME ZONE","DATETIME YEAR TO FRACTION",
-		"INTERVAL DAY TO SECOND","INTERVAL YEAR TO MONTH",
-		"LONG","LONG RAW","XML","XMLTYPE","JSON","IMAGE"
-	],
-	"lengthOption": false},
-	{"typeNames": ["DECIMAL","NUMERIC"],
-	"lengthOption": true,
-	"scaleOption": true},
-	{"typeNames": [
-		"FLOAT","DECFLOAT",
-		"BYTE",
-		"CHAR","VARCHAR","VARCHAR2","NCHAR","NVARCHAR","NVARCHAR2","ALPHANUM","GRAPHIC","VARGRAPHIC","BINARY","VARBINARY","VARBYTE","BINARYVAR",
-		"LONGVARCHAR","LONG VARCHAR","LONGNVARCHAR","LONG NVARCHAR","LONG VARBINARY","LONG BINARY",
-		"LVARCHAR","CLOB","NCLOB","STRING","TEXT","NTEXT","TINYTEXT","MEDIUMTEXT","LONGTEXT","BINTEXT","BLOB","TINYBLOB","MEDIUMBLOB","LONGBLOB","BYTEA","BFILE",
-		"DBCLOB"
-	],
-	"lengthOption": true}
+	"typeOptions": [{
+			"typeNames": [
+				"BOOLEAN", "BIT", "BYTEINT", "TINYINT", "SMALLINT", "INT", "INTEGER", "BIGINT", "REAL", "DOUBLE", "DOUBLE PRECISION",
+				"DATE", "TIME", "TIMETZ", "TIME WITH TIME ZONE", "SECONDDATE", "DATETIME", "DATETIMEOFFSET", "TIMESTAMP", "TIMESTAMPTZ", "TIMESTAMP WITH TIME ZONE", "DATETIME YEAR TO FRACTION",
+				"INTERVAL DAY TO SECOND", "INTERVAL YEAR TO MONTH",
+				"LONG", "LONG RAW", "XML", "XMLTYPE", "JSON", "IMAGE"
+			],
+			"lengthOption": false
+		}, {
+			"typeNames": ["DECIMAL", "NUMERIC"],
+			"lengthOption": true,
+			"scaleOption": true
+		}, {
+			"typeNames": [
+				"FLOAT", "DECFLOAT",
+				"BYTE",
+				"CHAR", "VARCHAR", "VARCHAR2", "NCHAR", "NVARCHAR", "NVARCHAR2", "ALPHANUM", "GRAPHIC", "VARGRAPHIC", "BINARY", "VARBINARY", "VARBYTE", "BINARYVAR",
+				"LONGVARCHAR", "LONG VARCHAR", "LONGNVARCHAR", "LONG NVARCHAR", "LONG VARBINARY", "LONG BINARY",
+				"LVARCHAR", "CLOB", "NCLOB", "STRING", "TEXT", "NTEXT", "TINYTEXT", "MEDIUMTEXT", "LONGTEXT", "BINTEXT", "BLOB", "TINYBLOB", "MEDIUMBLOB", "LONGBLOB", "BYTEA", "BFILE",
+				"DBCLOB"
+			],
+			"lengthOption": true
+		}
 	]
 }
